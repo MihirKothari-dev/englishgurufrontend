@@ -1,0 +1,47 @@
+<form [formGroup]="loginForm">
+  <div class="row">
+    <div class="col-11">
+      <div class="row mt-4">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <div class="row">
+            <div class="col-12 mb-4">
+              <div class="clr-whiteshade f-size-35 f-w-600">Sign In</div>
+            </div>
+            <div class="col-12 background-set">
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                  <div class="row">
+                    <div class="col-12">
+                      <label for="Email" class="form-label f-size-25 f-w-600">E-mail</label>
+                      <input type="text" class="form-control input-set" name="Email" placeholder="name@gmail.com" formControlName="Email">
+                    </div>
+                    <div class="col-12 mt-4">
+                      <label for="Password" class="form-label f-size-25 f-w-600">Password</label>
+                      <input type="password" class="form-control input-set" name="Password" placeholder="8+ Characters 1 Capital letter" formControlName="Password">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 d-flex justify-content-end">
+                      <!-- <button type="button" class="btn btn-link f-size-18 forgot-pass clr-pinkshade" (click)="forgotPass()">Forgot Password</button> -->
+                    </div>
+                  </div>
+                  <div class="row mt-5">
+                    <div class="col-12">
+                      <button type="button" class="btn addbtn f-size-20" (click)="login()">Sign In</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+        
+      </div>
+    </div>
+  </div>
+</form>

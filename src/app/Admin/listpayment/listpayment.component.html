@@ -1,0 +1,52 @@
+<div class="container pt-4 mt-5">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between">
+            <div class="f-size-25 f-w-600">Payment Management</div>            
+        </div>
+    </div>
+    <div class="row element-section p-4">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="head-shadow">
+                        <tr>
+                          <th scope="col">Sr. No.</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Order Id</th>
+                          <th scope="col">Course Name</th>
+                          <th scope="col">Customer Id</th>
+                          <th scope="col">Customer Name</th>
+                          <th scope="col">Total Amount</th>
+                          <th scope="col">Amount Received</th>
+                          <th scope="col">Transaction Id</th>
+                          <th scope="col" class="col-2">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody *ngIf="paymentData.length == 0">
+                          <tr>
+                            <td colspan="10">
+                                No data found
+                            </td>
+                          </tr>
+                      </tbody>
+                      <tbody *ngIf="paymentData.length > 0">
+                        <tr *ngFor="let c of paymentData;index as i" class="body-record-class">
+                          <th scope="row">{{i+1}}</th>
+                          <td>{{c?.date}}</td>
+                          <td>{{c?.orderid}}</td>
+                          <td>{{c?.coursename}}</td>
+                          <td>{{c?.CustomerId}}</td>
+                          <td>{{c?.custname}}</td>
+                          <td>{{c?.totalamt}}</td>
+                          <td>{{c?.amtreceived}}</td>
+                          <td>{{c?.txtid}}</td>                          
+                          <td>
+                            <span class="editbtn margin-r-10 c-pointer" (click)="view(c)"><i class="bi bi-eye-fill"></i> View</span>
+                          </td>
+                        </tr>                        
+                      </tbody>                    
+                </table>
+              </div>           
+        </div>
+    </div>
+</div>

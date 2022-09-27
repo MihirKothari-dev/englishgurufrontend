@@ -1,0 +1,90 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light header-background header-height">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0);">
+          <span>
+           
+              EG
+            </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">        
+        <span class="navbar-text header-hotel-name">
+            <div class="name-title f-w-500">ENGLISH GURU</div>
+            
+        </span>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">         
+                   
+        </ul>
+        <form class="d-flex">          
+            <span class="form-control profile-icon"><svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 45C10.0736 45 0 34.9264 0 22.5C0 10.0736 10.0736 0 22.5 0C34.9264 0 45 10.0736 45 22.5C45 34.9264 34.9264 45 22.5 45ZM22.5 4.5C12.5589 4.5 4.5 12.5589 4.5 22.5C4.5 27.6508 6.6635 32.2963 10.1313 35.5774C11.9572 31.8312 15.8022 29.25 20.25 29.25H25.875C30.0196 29.25 33.5825 31.7403 35.1492 35.3061C38.4528 32.0428 40.5 27.5105 40.5 22.5C40.5 12.5589 32.4411 4.5 22.5 4.5ZM31.3699 38.1665C30.8169 35.6407 28.5667 33.75 25.875 33.75H20.25C17.2929 33.75 14.7799 35.6516 13.8671 38.2986C16.4301 39.702 19.3719 40.5 22.5 40.5C25.725 40.5 28.7519 39.6519 31.3699 38.1665ZM22.5 27C17.5294 27 13.5 22.9706 13.5 18C13.5 13.0294 17.5294 9 22.5 9C27.4706 9 31.5 13.0294 31.5 18C31.5 22.9706 27.4706 27 22.5 27ZM22.5 13.5C20.0147 13.5 18 15.5147 18 18C18 20.4853 20.0147 22.5 22.5 22.5C24.9853 22.5 27 20.4853 27 18C27 15.5147 24.9853 13.5 22.5 13.5Z" fill="#0E0E0E"/>
+              </svg>
+              </span>
+          <a class="nav-link profile-drpwn padding-r-0" href="javascript:void(0);" id="user-menu" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="user-profile-name">Super Admin</span>
+            
+          </a>
+          <span class="margin-l-5 mt-3 c-pointer" id="user-menu" data-bs-toggle="dropdown"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C-0.0976311 0.683417 -0.0976312 1.31658 0.292893 1.70711L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711L13.7071 1.70711C14.0976 1.31658 14.0976 0.683418 13.7071 0.292894C13.3166 -0.0976305 12.6834 -0.0976305 12.2929 0.292894L7 5.58579L1.70711 0.292893C1.31658 -0.097631 0.683418 -0.0976311 0.292893 0.292893Z" fill="black"/>
+            </svg>
+            </span>
+            <ul class="dropdown-menu user-dropdown-menu" aria-labelledby="user-menu">
+              <!-- <li><a class="dropdown-item f-w-600" href="javascript:void(0);" (click)="updateProfile()" >Profile</a></li>               -->
+              <li><a class="dropdown-item f-w-600" href="javascript:void(0);" routerLink="/admin/resetpass">Reset password</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item f-w-600" href="javascript:void(0);" (click)="logout()">Logout</a></li>
+            </ul>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <button #updateProfileModeModal [hidden]="true" data-bs-toggle="modal" data-bs-target="#updateProfileModeModal">Open Modal</button>
+<div class="modal fade" id="updateProfileModeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header modal-header-custom">
+        <h5 class="modal-title modal-title-custom" id="staticBackdropLabel">User Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #btnProfileDeleteCnfClose></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          
+            <div class="col-12">
+              <form [formGroup]="profileForm">
+                <div class="row">
+                  <div class="col-6">
+                    <label for="selchain" class="form-label">Name</label>
+                    <input type="text" class="form-control" formControlName="Name">
+                  </div>
+                  <div class="col-6">
+                    <label for="txtByTrain" class="form-label">Email</label>
+                    <input type="text" class="form-control" formControlName="Email" readonly>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6">
+                  <label for="txtAirline" class="form-label">Role</label>
+                  <input type="text" class="form-control" value="Admin" readonly>
+                </div>
+                <div class="col-6">
+                  
+                </div>
+              </div>
+              
+            </form>
+            </div>
+          
+        </div>
+          <div class="row mt-4">
+              <div class="col-12">
+                <div class="footer-buttons text-end">
+                    <button type="button" class="btn btn-primary search-btn margin-r-10 hover-override" (click)="openDialog('save')">Save</button>
+                    <button type="button" class="btn btn-link dwnld-btn hover-override" (click)="openDialog('cancel')" >Cancel</button>
+                  </div>
+              </div>
+          </div>
+      
+  </div>
+</div>

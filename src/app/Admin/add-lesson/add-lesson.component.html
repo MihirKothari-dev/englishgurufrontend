@@ -1,0 +1,74 @@
+
+<div class="container pt-4 mt-5">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between">
+            <div class="f-size-25 f-w-600">Add Lesson</div>
+            <div class="view-list c-pointer" routerLink="/admin/listlesson">View List</div>
+        </div>
+    </div>
+    <div class="row element-section p-4">
+        <form [formGroup]="lessonData">
+        <div class="col-12">
+            
+            <div class="row">
+                <div class="col-3">
+                    <label for="txtcname" class="form-label">Course Category</label>
+                    <select class="form-select form-select-md" formControlName="CategoryId">
+                        <option value="">Select Course Category</option>                        
+                        <option *ngFor="let rt of courseCategoryData" value="{{rt.CategoryId}}">{{rt.CategoryName}}</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label for="txtcname" class="form-label">Course Sub Category</label>
+                    <select class="form-select form-select-md" formControlName="SubCategoryId">
+                        <option value="">Select Course Sub Category</option>  
+                        <option *ngFor="let rt of courseSubCategoryData" value="{{rt.SubCategoryId}}">{{rt.SubCategoryName}}</option>                      
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label for="txtcname" class="form-label">Course Name</label>
+                    <select class="form-select form-select-md" formControlName="CourseId">
+                        <option value="">Select Course Name</option>  
+                        <option *ngFor="let rt of courseData" value="{{rt.CourseId}}">{{rt.CourseName}}</option>                      
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-3">
+                
+                <div class="col-3">
+                    <label for="txtidate" class="form-label">Lesson Number</label>
+                    <input type="text" class="form-control" placeholder="Enter lesson number" formControlName="lessionNo">
+                </div>
+                <div class="col-9">
+                    <label for="txtmobile" class="form-label">Lesson Name</label>
+                    <textarea class="form-control" placeholder="Enter lesson name" formControlName="lessionName"></textarea>
+                </div>
+            </div>
+            <div class="row mt-3">
+                
+                
+                <div class="col-3">
+                    <!-- <label for="txtiduration" class="form-label">Course Price</label>
+                    <input type="text" class="form-control" placeholder="Enter Price in rupees" formControlName="CoursePrice"> -->
+                </div>
+                <div class="col-3">
+                    <!-- <label for="txtiduration" class="form-label">No. of Lesson</label>
+                    <input type="text" class="form-control" placeholder="Enter No. of Lesson" formControlName="NoofLession"> -->
+                </div>
+                <div class="col-3"></div>
+                <div class="col-3">
+                   
+                    
+                </div>
+            </div>
+          
+            
+            <div class="row mt-5 mb-4">
+                <div class="col-12 d-flex justify-content-center">
+                    <button class="btn addbtn" (click)="saveLesson()">Add Lesson</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>

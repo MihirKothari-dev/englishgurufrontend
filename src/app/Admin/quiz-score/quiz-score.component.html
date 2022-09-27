@@ -1,0 +1,93 @@
+<div class="container pt-4 mt-5 mb-5">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between">
+            <div class="f-size-25 f-w-600">View Question Details </div>  
+            <div class="view-list c-pointer" routerLink="/admin/listenroll">View List</div> 
+        </div>
+    </div>
+    <div class="row element-section p-4">
+        <div class="col-12">
+            <div class="row mt-3">
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Category:</Span>
+                    <span>{{quizData[0]?.Category[0]?.CategoryName}}</span>
+                </div>
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Subcategory:</Span>
+                    <span>{{quizData[0]?.SubCategory[0]?.SubCategoryName}}</span>
+                </div>
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Course ID:</Span>
+                    <span>{{quizData[0]?.Course[0]?.CourseId}}</span>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Course Name:</Span>
+                    <span>{{quizData[0]?.Course[0]?.CourseName}}</span>
+                </div>
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Quiz Title:</Span>
+                    <span>{{quizData[0]?.Quiz[0]?.QuizTitle}}</span>
+                </div>
+                <div class="col-4">
+                    <Span class="fw-bold me-3">No of Quiz Questions:</Span>
+                    <span>{{quizData[0]?.Quiz[0]?.NoofQuizQuestion}}</span>
+                </div>
+            </div>
+            <div class="row mt-2 mb-4">
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Time for Quiz (In Minutes):</Span>
+                    <span>{{quizData[0]?.Quiz[0]?.QuizTimeDuration}}</span>
+                </div>
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Quiz Marking Scheme:</Span>
+                    <span>{{quizData[0]?.Quiz[0]?.QuizMarkingSchema}}</span>
+                </div>
+                <div class="col-4">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-12 b-color p-3">
+             <div class="row mt-3">
+                <div class="col-12">
+                    <span class="fw-bold me-3">Total Questions:</span>
+                    <span>{{quizData[0]?.TotalQuestion}}</span>
+                </div>
+                
+             </div>   
+             <div class="row mt-3">
+                <div class="col-12">
+                    <span class="fw-bold me-3">Correct Answer:</span>
+                    <span>{{quizData[0]?.TotalCorrectAnswer}}</span>
+                </div>
+                
+             </div>  
+             <div class="row mt-3">
+                <div class="col-12">
+                    <span class="fw-bold me-3">Wrong Answer:</span>
+                    <span>{{quizData[0]?.TotalWorngAnswer}}</span>
+                </div>
+             </div>  
+             <div class="row mt-4">
+                <div class="col-12 mt-4 d-flex align-items-center justify-content-center">
+                    <canvas baseChart
+                        [type]="'pie'"
+                        [datasets]="pieChartDatasets"
+                        [labels]="pieChartLabels"
+                        [options]="pieChartOptions"
+                        [plugins]="pieChartPlugins"
+                        [legend]="pieChartLegend">
+                    </canvas>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-12 mt-4 d-flex align-items-center justify-content-center">
+                    <span class="fw-bold me-3">Your Score:</span>
+                    <span class="fw-bold">{{(quizData[0]?.TotalCorrectAnswer / quizData[0]?.TotalQuestion *100)|number:'1.0-0'}} %</span>
+                </div>
+             </div>   
+        </div>
+    </div>
+</div>

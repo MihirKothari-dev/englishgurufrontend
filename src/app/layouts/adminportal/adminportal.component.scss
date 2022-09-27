@@ -1,0 +1,31 @@
+.side-menu {
+    background-color: #084E8E;
+    position: absolute;
+    top: 10%;
+    // bottom: 0;
+    z-index: 1;
+    width: 81px;
+}
+.side-menu-expand {
+    width: 275px !important;
+}
+.main-content {
+    background-color: #E5E5E5;
+    position: absolute;
+    top: 10%;
+    // bottom: 0;
+    left: 75px;
+    width: 95%;
+}
+.main-content-resize {
+    width: 83.3%
+}
+.top-space-skipping {
+    padding-top: 6.5%;
+}
+.main-content-left {
+    left: 252px !important;
+}
+.main-container-extra-settings { 
+    min-height: 100%;
+}

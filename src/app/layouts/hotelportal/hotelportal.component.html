@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <app-header></app-header>
+        </div>
+    </div>
+    <div class="row">
+        <div [class.side-menu-expand]="isMenuExpand" class="side-menu main-container-extra-settings"><app-left-menu></app-left-menu></div>
+        <div [class.main-content-resize]="isMenuExpand" [class.main-content-left]="isMenuExpand" class="main-content main-container-extra-settings"><router-outlet></router-outlet></div>
+    </div>
+</div>

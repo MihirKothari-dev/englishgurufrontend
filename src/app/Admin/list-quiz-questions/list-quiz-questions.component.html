@@ -1,0 +1,119 @@
+<div class="container pt-4 mt-5">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between">
+            <div class="f-size-25 f-w-600">View Question Details </div>  
+            <div class="view-list c-pointer" routerLink="/admin/listquiz">View List</div> 
+        </div>
+    </div>
+    <div class="row element-section p-4">
+        <div class="col-12">
+            <div class="row mt-3">
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Category:</Span>
+                    <span>{{quizData[0]?.Category[0]?.CategoryName}}</span>
+                </div>
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Subcategory:</Span>
+                    <span>{{quizData[0]?.SubCategory[0]?.SubCategoryName}}</span>
+                </div>
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Course ID:</Span>
+                    <span>{{quizData[0]?.Course[0]?.CourseId}}</span>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Course Name:</Span>
+                    <span>{{quizData[0]?.Course[0]?.CourseName}}</span>
+                </div>
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Quiz Title:</Span>
+                    <span>{{quizData[0]?.QuizTitle}}</span>
+                </div>
+                <div class="col-4">
+                    <Span class="fw-bold me-3">No of Quiz Questions:</Span>
+                    <span>{{quizData[0]?.NoofQuizQuestion}}</span>
+                </div>
+            </div>
+            <div class="row mt-2 mb-4">
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Time for Quiz (In Minutes):</Span>
+                    <span>{{quizData[0]?.QuizTimeDuration}}</span>
+                </div>
+                <div class="col-4">
+                    <Span class="fw-bold me-3">Quiz Marking Scheme:</Span>
+                    <span>{{quizData[0]?.QuizMarkingSchema}}</span>
+                </div>
+                <div class="col-4">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="head-shadow">
+                        <tr>
+                          <th scope="col">Sr. No.</th>
+                          <th scope="col">Quiz Question</th>
+                          <th scope="col">Option 1</th>                          
+                          <th scope="col">Option 2</th>
+                          <th scope="col">Option 3</th>
+                          <th scope="col">Option 4</th>
+                          <th scope="col">Correct Answer</th>                          
+                          <th scope="col" class="col-2">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody *ngIf="quizQuestionData.length == 0">
+                          <tr>
+                            <td colspan="8">
+                                No data found
+                            </td>
+                          </tr>
+                      </tbody>
+                      <tbody *ngIf="quizQuestionData.length > 0">
+                        <tr *ngFor="let c of quizQuestionData;index as i" class="body-record-class">
+                          <th scope="row">{{i+1}}</th>
+                          <td>{{c?.QuizQuestion}}</td>
+                          <td>{{c?.Option1}}</td>                                                 
+                          <td>{{c?.Option2}}</td>                                                 
+                          <td>{{c?.Option3}}</td>                                                 
+                          <td>{{c?.Option4}}</td>                                                 
+                          
+                        <td>{{c?.CorrectAnswer}}</td>
+                                                                                              
+                          <td>
+                            <div class="editbtn margin-r-10 c-pointer" (click)="edit(c, (i+1))"><i class="bi bi-pencil-fill"></i> Edit</div>
+                            
+                          </td>
+                        </tr>                        
+                      </tbody>                    
+                </table>
+              </div>           
+        </div>
+    </div>
+</div>
+<button #deleteConfirmationModal [hidden]="true" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">Open Modal</button>
+<div class="modal fade" id="deleteConfirmationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header modal-header-custom">
+        <h5 class="modal-title modal-title-custom" id="staticBackdropLabel">Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #btnDeleteCnfClose></button>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-12">Are you sure, you want to delete these quiz?</div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-12">
+                <div class="footer-buttons">
+                    <button type="button" class="btn btn-primary search-btn margin-r-10 hover-override" (click)="openDialog('delete')">Delete</button>
+                    <button type="button" class="btn btn-link dwnld-btn hover-override" (click)="openDialog('cancel')" >Cancel</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

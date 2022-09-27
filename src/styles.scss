@@ -1,0 +1,114 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Montserrat'; }
+// @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+    --header-height: 3rem;
+    --nav-width: 68px;
+    --first-color-light: #AFA5D9;
+    --white-color: #F7F6FB;
+    --body-font: 'Nunito', sans-serif;
+    --normal-font-size: 1rem;
+    --z-fixed: 100
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box
+}
+.header-height {
+  height: 84px;
+}
+.main-section-margin {
+  margin-top: 20%;
+}
+.ht-100-p {
+  height: 100%;
+}
+.ht-38 {
+  height: 38px;
+}
+.b-none {
+  border: none;
+}
+.drp-ht {
+  height: 38px;
+}
+.c-pointer {
+  cursor: pointer !important;
+}
+.clr-yellowshade {
+  color: #FFC01F;
+}
+.clr-blueshade {
+  color: #084E8E !important;
+}
+.clr-redshade {
+  color: #BC3E3E;
+}
+.clr-pinkshade{
+  color: #E9A6A6;
+}
+.clr-whiteshade{
+  color: #FFF;
+}
+.margin-r-5 {
+    margin-right: 5px;
+  }
+  .margin-r-10 {
+    margin-right: 10px !important;
+  }
+  .margin-r-25 {
+    margin-right: 25px;
+  }
+  .margin-l-10 {
+    margin-left: 10px;
+  }
+  .margin-l-25 {
+    margin-left: 25px;
+  }
+  .padding-l-10 {
+    padding-left: 10px;
+  }
+  .padding-l-25 {
+    padding-left: 25px;
+  }
+  .padding-r-10 {
+    padding-right: 10px;
+  }
+  .padding-r-15 {
+    padding-right: 15px;
+  }
+  .f-w-600 {
+    font-weight: 600;
+  }
+  .f-w-500 {
+    font-weight: 500 !important;
+  }
+  .f-size-13 {
+    font-size: 13px !important;
+  }
+  .f-size-14 {
+    font-size: 14px;
+  }
+  .f-fize-15 {
+    font-size: 15px;
+  }
+  .f-fize-18 {
+    font-size: 18px;
+  }
+  .f-size-20 {
+    font-size: 20px;
+  }
+  .f-size-25 {
+    font-size: 25px;
+  }
+  .f-size-35 {
+    font-size: 35px;
+  }
+  .f-size-12 {
+    font-size: 12px;
+  }

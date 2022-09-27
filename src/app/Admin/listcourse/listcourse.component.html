@@ -1,0 +1,86 @@
+<div class="container pt-4 mt-5">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between">
+            <div class="f-size-25 f-w-600">Course Details</div>   
+            <div class="view-list c-pointer" routerLink="/admin/course/0">Add</div>                     
+        </div>
+    </div>
+    <div class="row element-section p-4">
+        <div class="col-12">
+          <input style="display: none" type="file" (change)="onFileUpload($event)" #selectFile>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="head-shadow">
+                        <tr>
+                          <th scope="col">Sr. No.</th>
+                          <th scope="col">Category</th>
+                          <th scope="col">Sub Category</th>                          
+                          <th scope="col">Course Duration</th>
+                          <th scope="col">Course Price</th>
+                          <th scope="col">No. of Lesson</th>
+                          <th scope="col">What We Cover</th>
+                          <th scope="col" class="col-3">Course preview Video</th>
+                          <th scope="col" class="col-3">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody *ngIf="courseData.length == 0">
+                          <tr>
+                            <td colspan="9">
+                                No data found
+                            </td>
+                          </tr>
+                      </tbody>
+                      <tbody *ngIf="courseData.length > 0">
+                        <tr *ngFor="let c of courseData;index as i" class="body-record-class">
+                          <th scope="row">{{i+1}}</th>
+                          <td>{{c?.Category[0]?.CategoryName}}</td>
+                          <td>{{c?.SubCategory[0]?.SubCategoryName}}</td>                                                 
+                          <td>{{c?.CourseDuration}}</td>                                                 
+                          <td>{{c?.CoursePrice}}</td>                                                 
+                          <td>{{c?.NoofLession}}</td>                                                 
+                          <td>{{c?.WhatWeCover}}</td> 
+                          <td>
+                            <div *ngFor="let img of c?.CourseImage">
+                              <div class="text-end c-pointer" (click)="deleteFile(img)">
+                                <i class="bi bi-x-circle-fill"></i>
+                              </div>
+                              <iframe width="300" height="200" 
+                              [src]='photoURL(img.file)'>
+                              </iframe> 
+                            </div>                                                
+                          <td style="word-wrap: break-word;min-width: 145px;max-width: 145px;">
+                            <div class="editbtn mb-2 c-pointer" (click)="openFileUploader(c)"><i class="bi bi-cloud-plus-fill"></i> Upload Image/Video</div>
+                            <div class="editbtn mb-2 c-pointer" (click)="edit(c)"><i class="bi bi-pencil-fill"></i> Edit</div>
+                            <div class="deletebtn c-pointer" (click)="delete(c)"><i class="bi bi-trash3-fill"></i> Delete</div>
+                          </td>
+                        </tr>                        
+                      </tbody>                    
+                </table>
+              </div>           
+        </div>
+    </div>
+</div>
+<button #deleteConfirmationModal [hidden]="true" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">Open Modal</button>
+<div class="modal fade" id="deleteConfirmationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header modal-header-custom">
+        <h5 class="modal-title modal-title-custom" id="staticBackdropLabel">Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #btnDeleteCnfClose></button>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-12">Are you sure, you want to delete these user?</div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-12">
+                <div class="footer-buttons">
+                    <button type="button" class="btn btn-primary search-btn margin-r-10 hover-override" (click)="openDialog('delete')">Delete</button>
+                    <button type="button" class="btn btn-link dwnld-btn hover-override" (click)="openDialog('cancel')" >Cancel</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

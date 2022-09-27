@@ -1,0 +1,209 @@
+<ul class="nav nav-pills flex-column">
+    <li class="nav-item">      
+      <a class="nav-link" aria-current="page" routerLinkActive="Activated" href="javascript:void(0);">
+          <span class="left-menu-icon plain-icon" (click)="expand()"><svg width="20" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M21 0H16.2C14.5431 0 13.2 1.34315 13.2 3V7.8C13.2 9.45686 14.5431 10.8 16.2 10.8H21C22.6569 10.8 24 9.45685 24 7.8V3C24 1.34315 22.6569 0 21 0ZM15.6 3C15.6 2.66863 15.8686 2.4 16.2 2.4H21C21.3314 2.4 21.6 2.66863 21.6 3V7.8C21.6 8.13137 21.3314 8.4 21 8.4H16.2C15.8686 8.4 15.6 8.13137 15.6 7.8V3ZM3.27868 1.12721L1.12721 3.27868C-0.0443625 4.45025 -0.0443682 6.34974 1.12721 7.52132L3.27868 9.67279C4.45025 10.8444 6.34974 10.8444 7.52132 9.67279L9.67279 7.52132C10.8444 6.34975 10.8444 4.45026 9.67279 3.27868L7.52132 1.12721C6.34975 -0.0443625 4.45026 -0.0443682 3.27868 1.12721ZM2.82426 5.82426C2.58995 5.58995 2.58995 5.21005 2.82426 4.97574L4.97574 2.82426C5.21005 2.58995 5.58995 2.58995 5.82426 2.82426L7.97574 4.97574C8.21005 5.21005 8.21005 5.58995 7.97574 5.82426L5.82426 7.97574C5.58995 8.21005 5.21005 8.21005 4.97574 7.97574L2.82426 5.82426ZM7.8 13.2H3C1.34315 13.2 0 14.5431 0 16.2V21C0 22.6569 1.34315 24 3 24H7.8C9.45686 24 10.8 22.6569 10.8 21V16.2C10.8 14.5431 9.45685 13.2 7.8 13.2ZM2.4 16.2C2.4 15.8686 2.66863 15.6 3 15.6H7.8C8.13137 15.6 8.4 15.8686 8.4 16.2V21C8.4 21.3314 8.13137 21.6 7.8 21.6H3C2.66863 21.6 2.4 21.3314 2.4 21V16.2ZM18.6 24C15.6177 24 13.2 21.5823 13.2 18.6C13.2 15.6177 15.6177 13.2 18.6 13.2C21.5823 13.2 24 15.6177 24 18.6C24 21.5823 21.5823 24 18.6 24ZM18.6 15.6C16.9431 15.6 15.6 16.9431 15.6 18.6C15.6 20.2569 16.9431 21.6 18.6 21.6C20.2569 21.6 21.6 20.2569 21.6 18.6C21.6 16.9431 20.2569 15.6 18.6 15.6Z" fill="white"/>
+            </svg>            
+            </span>
+            <span class="left-menu-icon sel-icon" (click)="expand()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21 0H16.2C14.5431 0 13.2 1.34315 13.2 3V7.8C13.2 9.45686 14.5431 10.8 16.2 10.8H21C22.6569 10.8 24 9.45685 24 7.8V3C24 1.34315 22.6569 0 21 0ZM15.6 3C15.6 2.66863 15.8686 2.4 16.2 2.4H21C21.3314 2.4 21.6 2.66863 21.6 3V7.8C21.6 8.13137 21.3314 8.4 21 8.4H16.2C15.8686 8.4 15.6 8.13137 15.6 7.8V3ZM3.27868 1.12721L1.12721 3.27868C-0.0443625 4.45025 -0.0443682 6.34974 1.12721 7.52132L3.27868 9.67279C4.45025 10.8444 6.34974 10.8444 7.52132 9.67279L9.67279 7.52132C10.8444 6.34975 10.8444 4.45026 9.67279 3.27868L7.52132 1.12721C6.34975 -0.0443625 4.45026 -0.0443682 3.27868 1.12721ZM2.82426 5.82426C2.58995 5.58995 2.58995 5.21005 2.82426 4.97574L4.97574 2.82426C5.21005 2.58995 5.58995 2.58995 5.82426 2.82426L7.97574 4.97574C8.21005 5.21005 8.21005 5.58995 7.97574 5.82426L5.82426 7.97574C5.58995 8.21005 5.21005 8.21005 4.97574 7.97574L2.82426 5.82426ZM7.8 13.2H3C1.34315 13.2 0 14.5431 0 16.2V21C0 22.6569 1.34315 24 3 24H7.8C9.45686 24 10.8 22.6569 10.8 21V16.2C10.8 14.5431 9.45685 13.2 7.8 13.2ZM2.4 16.2C2.4 15.8686 2.66863 15.6 3 15.6H7.8C8.13137 15.6 8.4 15.8686 8.4 16.2V21C8.4 21.3314 8.13137 21.6 7.8 21.6H3C2.66863 21.6 2.4 21.3314 2.4 21V16.2ZM18.6 24C15.6177 24 13.2 21.5823 13.2 18.6C13.2 15.6177 15.6177 13.2 18.6 13.2C21.5823 13.2 24 15.6177 24 18.6C24 21.5823 21.5823 24 18.6 24ZM18.6 15.6C16.9431 15.6 15.6 16.9431 15.6 18.6C15.6 20.2569 16.9431 21.6 18.6 21.6C20.2569 21.6 21.6 20.2569 21.6 18.6C21.6 16.9431 20.2569 15.6 18.6 15.6Z" fill="#E9A6A6"/>
+                    </svg>
+                    
+                                                                                                                     
+            </span>
+          <span class="left-menu-text" [class.showtext]="isSideMenuExpanded" routerLink="/admin/dashboard">Dashboard</span> 
+      </a>
+      <a class="nav-link" aria-current="page" routerLinkActive="Activated" href="javascript:void(0);">
+        <span class="left-menu-icon plain-icon" (click)="expand()">
+            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.1111 7.5C4.76107 7.5 3.66666 6.38071 3.66666 5C3.66666 3.61929 4.76107 2.5 6.1111 2.5C7.46113 2.5 8.55554 3.61929 8.55554 5C8.55554 6.38071 7.46113 7.5 6.1111 7.5ZM9.53305 8.57098C10.4383 7.6635 11 6.39883 11 5C11 2.23858 8.81116 0 6.1111 0C3.41105 0 1.22222 2.23858 1.22222 5C1.22222 6.39883 1.78389 7.6635 2.68915 8.57098C1.06649 9.69461 0 11.5949 0 13.75V18.75C0 19.4404 0.547207 20 1.22222 20C1.89723 20 2.44444 19.4404 2.44444 18.75V13.75C2.44444 11.6789 4.08606 10 6.1111 10C8.13614 10 9.77776 11.6789 9.77776 13.75V18.75C9.77776 19.4404 10.325 20 11 20C11.675 20 12.2222 19.4404 12.2222 18.75V13.75C12.2222 11.5949 11.1557 9.69461 9.53305 8.57098ZM13.4444 4.375C13.4444 3.68464 13.9916 3.125 14.6666 3.125H17.827L17.4691 2.75888C16.9918 2.27073 16.9918 1.47927 17.4691 0.991117C17.9464 0.502961 18.7202 0.502961 19.1975 0.991117L21.642 3.49112C21.9915 3.84861 22.0961 4.38626 21.9069 4.85335C21.7178 5.32045 21.2721 5.625 20.7777 5.625H14.6666C13.9916 5.625 13.4444 5.06536 13.4444 4.375ZM20.7777 7.5C21.4528 7.5 22 8.05964 22 8.75C22 9.44036 21.4528 10 20.7777 10H17.6173L17.9753 10.3661C18.4526 10.8543 18.4526 11.6457 17.9753 12.1339C17.498 12.622 16.7241 12.622 16.2468 12.1339L13.8024 9.63388C13.4529 9.27638 13.3483 8.73874 13.5375 8.27164C13.7266 7.80455 14.1723 7.5 14.6666 7.5H20.7777Z" fill="white"/>
+                </svg>
+                
+            </span>
+            <span class="left-menu-icon sel-icon" (click)="expand()">
+                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.1111 7.5C4.76107 7.5 3.66666 6.38071 3.66666 5C3.66666 3.61929 4.76107 2.5 6.1111 2.5C7.46113 2.5 8.55554 3.61929 8.55554 5C8.55554 6.38071 7.46113 7.5 6.1111 7.5ZM9.53305 8.57098C10.4383 7.6635 11 6.39883 11 5C11 2.23858 8.81116 0 6.1111 0C3.41105 0 1.22222 2.23858 1.22222 5C1.22222 6.39883 1.78389 7.6635 2.68915 8.57098C1.06649 9.69461 0 11.5949 0 13.75V18.75C0 19.4404 0.547207 20 1.22222 20C1.89723 20 2.44444 19.4404 2.44444 18.75V13.75C2.44444 11.6789 4.08606 10 6.1111 10C8.13614 10 9.77776 11.6789 9.77776 13.75V18.75C9.77776 19.4404 10.325 20 11 20C11.675 20 12.2222 19.4404 12.2222 18.75V13.75C12.2222 11.5949 11.1557 9.69461 9.53305 8.57098ZM13.4444 4.375C13.4444 3.68464 13.9916 3.125 14.6666 3.125H17.827L17.4691 2.75888C16.9918 2.27073 16.9918 1.47927 17.4691 0.991117C17.9464 0.502961 18.7202 0.502961 19.1975 0.991117L21.642 3.49112C21.9915 3.84861 22.0961 4.38626 21.9069 4.85335C21.7178 5.32045 21.2721 5.625 20.7777 5.625H14.6666C13.9916 5.625 13.4444 5.06536 13.4444 4.375ZM20.7777 7.5C21.4528 7.5 22 8.05964 22 8.75C22 9.44036 21.4528 10 20.7777 10H17.6173L17.9753 10.3661C18.4526 10.8543 18.4526 11.6457 17.9753 12.1339C17.498 12.622 16.7241 12.622 16.2468 12.1339L13.8024 9.63388C13.4529 9.27638 13.3483 8.73874 13.5375 8.27164C13.7266 7.80455 14.1723 7.5 14.6666 7.5H20.7777Z" fill="#E9A6A6"/>
+                    </svg>
+                    
+                </span>
+        <span id="bookingmenu" class="left-menu-text" (click)="toggleDropDownMenu('customer')" [class.showtext]="isSideMenuExpanded">
+            User Management
+            <span class="margin-l-5" data-bs-toggle="collapse">
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C-0.0976311 0.683417 -0.0976312 1.31658 0.292893 1.70711L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711L13.7071 1.70711C14.0976 1.31658 14.0976 0.683418 13.7071 0.292894C13.3166 -0.0976305 12.6834 -0.0976305 12.2929 0.292894L7 5.58579L1.70711 0.292893C1.31658 -0.097631 0.683418 -0.0976311 0.292893 0.292893Z" fill="white"/>
+                </svg>                    
+            </span>            
+        </span>
+        <div id="booking-menu-items" class="accordion-collapse collapse dropdown-menu-items-background" [class.show]="dropDownMenu.customer">
+            <!-- <a class="nav-link" routerLinkActive="menu-item-selection-highlight"  aria-current="page" href="javascript:void(0);">            
+                <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded" routerLink="/admin/user/0">Add user</span> 
+            </a> -->
+            <a class="nav-link mt-0 pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);">            
+                <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded" routerLink="/admin/listuser">User List</span> 
+            </a>            
+        </div>
+        </a>
+        
+        <a class="nav-link" routerLinkActive="Activated" aria-current="page" href="javascript:void(0);">
+            <span class="left-menu-icon plain-icon" (click)="expand()"><svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0L10.021 0.266754L11.9192 1.23873L14.9561 0.202029C15.403 0.0494464 15.8957 0.187628 16.2044 0.55214C16.5131 0.916652 16.577 1.43571 16.3663 1.86728L14.439 5.81474L15.7433 6.98343C22.3316 12.8872 18.2544 24 9.5 24C0.745603 24 -3.33162 12.8872 3.25674 6.98343L4.56095 5.81474L2.63366 1.86728C2.42296 1.43571 2.48685 0.916652 2.79555 0.55214C3.10425 0.187628 3.59696 0.0494464 4.04394 0.202029L7.08085 1.23873L8.97905 0.266754L9.5 0ZM13.0248 3.37626L11.9639 5.54935C11.7176 6.02697 11.8134 6.63222 12.2276 7.0034L14.2091 8.77902C19.1785 13.232 16.1032 21.6141 9.5 21.6141C2.89683 21.6141 -0.178486 13.232 4.7909 8.77902L6.77242 7.0034C7.18664 6.63223 7.2824 6.02698 7.03614 5.54935L5.97517 3.37626L6.80186 3.65847L7.25961 3.81473L7.69118 3.59374L9.5 2.66754L11.3088 3.59374L11.7404 3.81473L12.1981 3.65847L13.0248 3.37626ZM10.6646 9.08801C10.6646 8.42915 10.1431 7.89505 9.49971 7.89505C8.85637 7.89505 8.33483 8.42915 8.33483 9.08801V9.51308C7.0178 9.70584 6.00534 10.8657 6.00534 12.2678C6.00534 13.8047 7.22195 15.0506 8.72271 15.0506H10.2794C10.4935 15.0506 10.667 15.2284 10.667 15.4476C10.667 15.6668 10.4935 15.8445 10.2794 15.8445H7.5587C6.91535 15.8445 6.39381 16.3786 6.39381 17.0375C6.39381 17.6963 6.91535 18.2304 7.5587 18.2304H8.33483V18.6274C8.33483 19.2862 8.85637 19.8203 9.49971 19.8203C10.1431 19.8203 10.6646 19.2862 10.6646 18.6274V18.2027C11.9829 18.0111 12.9968 16.8506 12.9968 15.4476C12.9968 13.9107 11.7802 12.6647 10.2794 12.6647H8.72271C8.50865 12.6647 8.33511 12.487 8.33511 12.2678C8.33511 12.0486 8.50865 11.8709 8.72271 11.8709H11.4434C12.0868 11.8709 12.6083 11.3368 12.6083 10.6779C12.6083 10.019 12.0868 9.48494 11.4434 9.48494H10.6646V9.08801Z" fill="white"/>
+                </svg>
+                
+                
+                </span>
+                <span class="left-menu-icon sel-icon" (click)="expand()"><svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0L10.021 0.266754L11.9192 1.23873L14.9561 0.202029C15.403 0.0494464 15.8957 0.187628 16.2044 0.55214C16.5131 0.916652 16.577 1.43571 16.3663 1.86728L14.439 5.81474L15.7433 6.98343C22.3316 12.8872 18.2544 24 9.5 24C0.745603 24 -3.33162 12.8872 3.25674 6.98343L4.56095 5.81474L2.63366 1.86728C2.42296 1.43571 2.48685 0.916652 2.79555 0.55214C3.10425 0.187628 3.59696 0.0494464 4.04394 0.202029L7.08085 1.23873L8.97905 0.266754L9.5 0ZM13.0248 3.37626L11.9639 5.54935C11.7176 6.02697 11.8134 6.63222 12.2276 7.0034L14.2091 8.77902C19.1785 13.232 16.1032 21.6141 9.5 21.6141C2.89683 21.6141 -0.178486 13.232 4.7909 8.77902L6.77242 7.0034C7.18664 6.63223 7.2824 6.02698 7.03614 5.54935L5.97517 3.37626L6.80186 3.65847L7.25961 3.81473L7.69118 3.59374L9.5 2.66754L11.3088 3.59374L11.7404 3.81473L12.1981 3.65847L13.0248 3.37626ZM10.6646 9.08801C10.6646 8.42915 10.1431 7.89505 9.49971 7.89505C8.85637 7.89505 8.33483 8.42915 8.33483 9.08801V9.51308C7.0178 9.70584 6.00534 10.8657 6.00534 12.2678C6.00534 13.8047 7.22195 15.0506 8.72271 15.0506H10.2794C10.4935 15.0506 10.667 15.2284 10.667 15.4476C10.667 15.6668 10.4935 15.8445 10.2794 15.8445H7.5587C6.91535 15.8445 6.39381 16.3786 6.39381 17.0375C6.39381 17.6963 6.91535 18.2304 7.5587 18.2304H8.33483V18.6274C8.33483 19.2862 8.85637 19.8203 9.49971 19.8203C10.1431 19.8203 10.6646 19.2862 10.6646 18.6274V18.2027C11.9829 18.0111 12.9968 16.8506 12.9968 15.4476C12.9968 13.9107 11.7802 12.6647 10.2794 12.6647H8.72271C8.50865 12.6647 8.33511 12.487 8.33511 12.2678C8.33511 12.0486 8.50865 11.8709 8.72271 11.8709H11.4434C12.0868 11.8709 12.6083 11.3368 12.6083 10.6779C12.6083 10.019 12.0868 9.48494 11.4434 9.48494H10.6646V9.08801Z" fill="#FFC01F"/>
+                    </svg>
+                                                          
+                    </span>
+            <span id="ratesrecover" class="left-menu-text" (click)="toggleDropDownMenu('docketmgt')" [class.showtext]="isSideMenuExpanded">Payment Management
+                <span class="margin-l-5" data-bs-toggle="collapse">
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C-0.0976311 0.683417 -0.0976312 1.31658 0.292893 1.70711L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711L13.7071 1.70711C14.0976 1.31658 14.0976 0.683418 13.7071 0.292894C13.3166 -0.0976305 12.6834 -0.0976305 12.2929 0.292894L7 5.58579L1.70711 0.292893C1.31658 -0.097631 0.683418 -0.0976311 0.292893 0.292893Z" fill="white"/>
+                    </svg>                    
+                </span>   
+            </span>
+            <div id="rates-recovery-menu-items" class="accordion-collapse collapse dropdown-menu-items-background" [class.show]="dropDownMenu.docketmgt" >
+                
+                <a class="nav-link pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded" routerLink="/admin/payment/0">View Payment</span> 
+                </a>
+                <a class="nav-link mt-0 pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded" routerLink="/admin/listpayment">Payment List</span> 
+                </a>                
+            </div>
+        </a>
+        
+        <a class="nav-link" routerLinkActive="Activated" aria-current="page" href="javascript:void(0);">
+            <span class="left-menu-icon plain-icon" (click)="expand()">
+                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 1.98996L8 1.98753H7H2.5C2.22386 1.98753 2 2.20999 2 2.48441V15.4071V15.8875V16.9539V17.3005C2 17.7867 2.63021 17.9835 2.91011 17.5847L3.10959 17.3005L3.72346 16.4258L4 16.0317L4.07396 15.9264C4.43412 15.4132 5.17616 15.3544 5.61352 15.8045L7.61164 17.8607C7.81876 18.0739 8.16636 18.0607 8.35648 17.8324L9.99227 15.8685C10.3944 15.3857 11.1403 15.3888 11.5383 15.8749L12 16.4388L12.2155 16.702L12.8554 17.4836L13.1122 17.7972C13.4092 18.1599 14 17.9512 14 17.4836V17.0793V16.0717V15.7324V2.49781C14 2.22386 13.7769 2.0016 13.5012 2.00093L9 1.98996ZM13.5061 0.0134057L8.0049 0H8H2.5C1.11929 0 0 1.11231 0 2.48441V17.3005C0 19.7317 3.15102 20.7158 4.55055 18.7217L5.01912 18.054L6.17295 19.2414C7.20855 20.3071 8.94658 20.241 9.89716 19.0997L10.756 18.0686L11.5608 19.0516C13.0458 20.8652 16 19.8217 16 17.4836V2.49781C16 1.12808 14.8844 0.016763 13.5061 0.0134057ZM8.99976 4.96881C8.99976 4.41997 8.55204 3.97505 7.99976 3.97505C7.44747 3.97505 6.99976 4.41997 6.99976 4.96881V5.32291C5.86915 5.48349 5 6.4497 5 7.61765C5 8.89795 6.0444 9.93583 7.33273 9.93583H8.6691C8.85286 9.93583 9.00183 10.0839 9.00183 10.2665C9.00183 10.4491 8.85286 10.5971 8.6691 10.5971H6.33349C5.7812 10.5971 5.33349 11.0421 5.33349 11.5909C5.33349 12.1397 5.7812 12.5847 6.33349 12.5847H6.99976V12.9153C6.99976 13.4642 7.44747 13.9091 7.99976 13.9091C8.55204 13.9091 8.99976 13.4642 8.99976 12.9153V12.5616C10.1315 12.402 11.0018 11.4352 11.0018 10.2665C11.0018 8.9862 9.95743 7.94831 8.6691 7.94831H7.33273C7.14897 7.94831 7 7.80027 7 7.61765C7 7.43504 7.14897 7.287 7.33273 7.287H9.66834C10.2206 7.287 10.6683 6.84207 10.6683 6.29323C10.6683 5.74439 10.2206 5.29947 9.66834 5.29947H8.99976V4.96881Z" fill="white"/>
+                    </svg>
+                    
+                    
+                </span>
+                <span class="left-menu-icon sel-icon" (click)="expand()">
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 1.98996L8 1.98753H7H2.5C2.22386 1.98753 2 2.20999 2 2.48441V15.4071V15.8875V16.9539V17.3005C2 17.7867 2.63021 17.9835 2.91011 17.5847L3.10959 17.3005L3.72346 16.4258L4 16.0317L4.07396 15.9264C4.43412 15.4132 5.17616 15.3544 5.61352 15.8045L7.61164 17.8607C7.81876 18.0739 8.16636 18.0607 8.35648 17.8324L9.99227 15.8685C10.3944 15.3857 11.1403 15.3888 11.5383 15.8749L12 16.4388L12.2155 16.702L12.8554 17.4836L13.1122 17.7972C13.4092 18.1599 14 17.9512 14 17.4836V17.0793V16.0717V15.7324V2.49781C14 2.22386 13.7769 2.0016 13.5012 2.00093L9 1.98996ZM13.5061 0.0134057L8.0049 0H8H2.5C1.11929 0 0 1.11231 0 2.48441V17.3005C0 19.7317 3.15102 20.7158 4.55055 18.7217L5.01912 18.054L6.17295 19.2414C7.20855 20.3071 8.94658 20.241 9.89716 19.0997L10.756 18.0686L11.5608 19.0516C13.0458 20.8652 16 19.8217 16 17.4836V2.49781C16 1.12808 14.8844 0.016763 13.5061 0.0134057ZM8.99976 4.96881C8.99976 4.41997 8.55204 3.97505 7.99976 3.97505C7.44747 3.97505 6.99976 4.41997 6.99976 4.96881V5.32291C5.86915 5.48349 5 6.4497 5 7.61765C5 8.89795 6.0444 9.93583 7.33273 9.93583H8.6691C8.85286 9.93583 9.00183 10.0839 9.00183 10.2665C9.00183 10.4491 8.85286 10.5971 8.6691 10.5971H6.33349C5.7812 10.5971 5.33349 11.0421 5.33349 11.5909C5.33349 12.1397 5.7812 12.5847 6.33349 12.5847H6.99976V12.9153C6.99976 13.4642 7.44747 13.9091 7.99976 13.9091C8.55204 13.9091 8.99976 13.4642 8.99976 12.9153V12.5616C10.1315 12.402 11.0018 11.4352 11.0018 10.2665C11.0018 8.9862 9.95743 7.94831 8.6691 7.94831H7.33273C7.14897 7.94831 7 7.80027 7 7.61765C7 7.43504 7.14897 7.287 7.33273 7.287H9.66834C10.2206 7.287 10.6683 6.84207 10.6683 6.29323C10.6683 5.74439 10.2206 5.29947 9.66834 5.29947H8.99976V4.96881Z" fill="#FFC01F"/>
+                        </svg>
+                                                  
+                    </span>
+                    <span class="left-menu-text" (click)="toggleDropDownMenu('officemgt')" [class.showtext]="isSideMenuExpanded">Banner Management
+                <span class="margin-l-5" data-bs-toggle="collapse">
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C-0.0976311 0.683417 -0.0976312 1.31658 0.292893 1.70711L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711L13.7071 1.70711C14.0976 1.31658 14.0976 0.683418 13.7071 0.292894C13.3166 -0.0976305 12.6834 -0.0976305 12.2929 0.292894L7 5.58579L1.70711 0.292893C1.31658 -0.097631 0.683418 -0.0976311 0.292893 0.292893Z" fill="white"/>
+                    </svg>                    
+                </span>  
+            </span>
+            <div class="accordion-collapse collapse dropdown-menu-items-background mt-1" [class.show]="dropDownMenu.officemgt" >
+                
+                <a class="nav-link pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/banner/0">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Add Banner</span> 
+                </a>
+                <a class="nav-link mt-0 pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/listbanner">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Banner List</span> 
+                </a>               
+            </div>
+        </a>
+        <a class="nav-link" routerLinkActive="Activated" aria-current="page" href="javascript:void(0);">
+            <span class="left-menu-icon plain-icon" (click)="expand()">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.60986 0.0707454C9.8614 -0.0235818 10.1386 -0.0235818 10.3901 0.0707454L19.279 3.40408C19.7127 3.56671 20 3.98128 20 4.44444V7.77778C20 8.39143 19.5025 8.88889 18.8889 8.88889H17.7778L17.7778 13.3333L17.7778 17.7778H18.8889C19.5025 17.7778 20 18.2752 20 18.8889C20 19.5025 19.5025 20 18.8889 20H16.6667H12.2222L7.77777 20L3.33333 20H1.11111C0.497461 20 0 19.5025 0 18.8889C0 18.2752 0.497461 17.7778 1.11111 17.7778H2.22222L2.22223 13.3333L2.22223 8.88889H1.11111C0.497461 8.88889 0 8.39143 0 7.77778V4.44444C0 3.98128 0.287303 3.56671 0.720974 3.40408L9.60986 0.0707454ZM4.44446 8.88889L4.44445 13.3333L4.44445 17.7778H6.66666L6.66667 13.3333L6.66667 8.88889H4.44446ZM8.8889 8.88889L8.88889 13.3333L8.88889 17.7778H11.1111L11.1111 13.3333L11.1111 8.88889H8.8889ZM13.3333 8.88889L13.3333 13.3333L13.3333 17.7778H15.5555L15.5555 13.3333L15.5556 8.88889H13.3333ZM16.6667 6.66667H12.2222L2.22222 6.66667V5.21445L10 2.29778L17.7778 5.21445V6.66667L16.6667 6.66667Z" fill="white"/>
+                    </svg>
+                    
+                    
+                </span>
+                <span class="left-menu-icon sel-icon" (click)="expand()">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.60986 0.0707454C9.8614 -0.0235818 10.1386 -0.0235818 10.3901 0.0707454L19.279 3.40408C19.7127 3.56671 20 3.98128 20 4.44444V7.77778C20 8.39143 19.5025 8.88889 18.8889 8.88889H17.7778L17.7778 13.3333L17.7778 17.7778H18.8889C19.5025 17.7778 20 18.2752 20 18.8889C20 19.5025 19.5025 20 18.8889 20H16.6667H12.2222L7.77777 20L3.33333 20H1.11111C0.497461 20 0 19.5025 0 18.8889C0 18.2752 0.497461 17.7778 1.11111 17.7778H2.22222L2.22223 13.3333L2.22223 8.88889H1.11111C0.497461 8.88889 0 8.39143 0 7.77778V4.44444C0 3.98128 0.287303 3.56671 0.720974 3.40408L9.60986 0.0707454ZM4.44446 8.88889L4.44445 13.3333L4.44445 17.7778H6.66666L6.66667 13.3333L6.66667 8.88889H4.44446ZM8.8889 8.88889L8.88889 13.3333L8.88889 17.7778H11.1111L11.1111 13.3333L11.1111 8.88889H8.8889ZM13.3333 8.88889L13.3333 13.3333L13.3333 17.7778H15.5555L15.5555 13.3333L15.5556 8.88889H13.3333ZM16.6667 6.66667H12.2222L2.22222 6.66667V5.21445L10 2.29778L17.7778 5.21445V6.66667L16.6667 6.66667Z" fill="#FFC01F"/>
+                        </svg>
+                        
+                        
+                </span>
+            <span class="left-menu-text" (click)="toggleDropDownMenu('deliveryboyagent')" [class.showtext]="isSideMenuExpanded">Courses Management
+                <span class="margin-l-5" data-bs-toggle="collapse">
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C-0.0976311 0.683417 -0.0976312 1.31658 0.292893 1.70711L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711L13.7071 1.70711C14.0976 1.31658 14.0976 0.683418 13.7071 0.292894C13.3166 -0.0976305 12.6834 -0.0976305 12.2929 0.292894L7 5.58579L1.70711 0.292893C1.31658 -0.097631 0.683418 -0.0976311 0.292893 0.292893Z" fill="white"/>
+                    </svg>                    
+                </span> 
+            </span>
+            <div class="accordion-collapse collapse dropdown-menu-items-background mt-1" [class.show]="dropDownMenu.deliveryboyagent" >
+                
+                <a class="nav-link pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/category/0">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Add Category</span> 
+                </a>
+                <a class="nav-link mt-0 pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/listcategory">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Category List</span> 
+                </a>   
+                <a class="nav-link pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/subcategory/0">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Add Sub Category</span> 
+                </a>
+                <a class="nav-link mt-0 pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/listsubcategory">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Sub Category List</span> 
+                </a> 
+                <a class="nav-link pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/course/0">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Add Course</span> 
+                </a>
+                <a class="nav-link mt-0 pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/listcourse">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Course List</span> 
+                </a> 
+                <a class="nav-link pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/lesson/0">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Add Lesson</span> 
+                </a>
+                <a class="nav-link mt-0 pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/listlesson">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Lesson List</span> 
+                </a>
+                <a class="nav-link pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/addquiz/0">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Add Quiz</span> 
+                </a>
+                <a class="nav-link mt-0 pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/listquiz">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Quiz List</span> 
+                </a>               
+            </div>
+        </a>
+        <a id="propertymenu" routerLinkActive="Activated" class="nav-link" aria-current="page" href="javascript:void(0);">
+            <span class="left-menu-icon plain-icon" (click)="expand()">
+                <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7 16L3.3 16C1.47746 16 9.17912e-07 14.465 7.86781e-07 12.5714L9.17912e-07 5.71429L0 3.42857C-1.3113e-07 1.53503 1.47746 1.63487e-06 3.3 1.63487e-06L18.7 0C20.5225 0 22 1.53502 22 3.42857V12.5714C22 14.465 20.5225 16 18.7 16ZM2.2 4.57143V3.42857C2.2 2.79739 2.69249 2.28572 3.3 2.28572L18.7 2.28571C19.3075 2.28571 19.8 2.79739 19.8 3.42857V4.57143H2.2ZM2.2 6.85714H19.8V12.5714C19.8 13.2026 19.3075 13.7143 18.7 13.7143L3.3 13.7143C2.69249 13.7143 2.2 13.2026 2.2 12.5714L2.2 6.85714ZM3.3 10.2857C3.3 9.65453 3.79249 9.14286 4.4 9.14286H8.8C9.40751 9.14286 9.9 9.65453 9.9 10.2857C9.9 10.9169 9.40751 11.4286 8.8 11.4286H4.4C3.79249 11.4286 3.3 10.9169 3.3 10.2857Z" fill="white"/>
+                    </svg>
+                    
+                    
+                </span>
+                <span class="left-menu-icon sel-icon" (click)="expand()">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7 16L3.3 16C1.47746 16 9.17912e-07 14.465 7.86781e-07 12.5714L9.17912e-07 5.71429L0 3.42857C-1.3113e-07 1.53503 1.47746 1.63487e-06 3.3 1.63487e-06L18.7 0C20.5225 0 22 1.53502 22 3.42857V12.5714C22 14.465 20.5225 16 18.7 16ZM2.2 4.57143V3.42857C2.2 2.79739 2.69249 2.28572 3.3 2.28572L18.7 2.28571C19.3075 2.28571 19.8 2.79739 19.8 3.42857V4.57143H2.2ZM2.2 6.85714H19.8V12.5714C19.8 13.2026 19.3075 13.7143 18.7 13.7143L3.3 13.7143C2.69249 13.7143 2.2 13.2026 2.2 12.5714L2.2 6.85714ZM3.3 10.2857C3.3 9.65453 3.79249 9.14286 4.4 9.14286H8.8C9.40751 9.14286 9.9 9.65453 9.9 10.2857C9.9 10.9169 9.40751 11.4286 8.8 11.4286H4.4C3.79249 11.4286 3.3 10.9169 3.3 10.2857Z" fill="#FFC01F"/>
+                        </svg>
+                        
+                                          
+                    </span>
+            <span class="left-menu-text" (click)="toggleDropDownMenu('billing')" [class.showtext]="isSideMenuExpanded">
+                Enroll Management
+                <span class="margin-l-5" data-bs-toggle="collapse">
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C-0.0976311 0.683417 -0.0976312 1.31658 0.292893 1.70711L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711L13.7071 1.70711C14.0976 1.31658 14.0976 0.683418 13.7071 0.292894C13.3166 -0.0976305 12.6834 -0.0976305 12.2929 0.292894L7 5.58579L1.70711 0.292893C1.31658 -0.097631 0.683418 -0.0976311 0.292893 0.292893Z" fill="white"/>
+                    </svg>                    
+                </span> 
+            </span>
+            <div id="property-menu-items" class="accordion-collapse dropdown-menu-items-background collapse" [class.show]="dropDownMenu.billing" >
+                <a class="nav-link" routerLinkActive="menu-item-selection-highlight"  aria-current="page" href="javascript:void(0);" routerLink="/admin/enroll/0">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded" >Add Enrollment</span> 
+                </a>
+                <a class="nav-link mt-0 pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/listenroll">            
+                    <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Enrollment List</span> 
+                </a>
+                
+            </div>
+        </a>
+        
+        
+        <a class="nav-link logout-background mt-4" aria-current="page" href="javascript:void(0);" (click)="logout()">
+            <span class="left-menu-icon" (click)="expand()"><svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00631 9.05061C8.00631 9.60314 8.45403 10.051 9.00631 10.051C9.5586 10.051 10.0063 9.60314 10.0063 9.05061V1.00044C10.0063 0.447912 9.5586 -2.4225e-08 9.00631 0C8.45403 2.4225e-08 8.00631 0.447912 8.00631 1.00044V9.05061ZM13.9352 4.51632C14.3241 4.12393 14.9545 4.12393 15.3433 4.51632C17.3286 6.5198 17.997 9.11037 17.997 10.9547C17.997 12.8083 17.3232 15.3241 15.3433 17.322C13.358 19.3255 10.7909 20 8.96324 20C7.12647 20 4.63355 19.32 2.65369 17.322C0.66837 15.3185 0 12.728 0 10.8836C0 9.03002 0.673839 6.51429 2.65369 4.51632C3.04252 4.12393 3.67294 4.12393 4.06176 4.51632C4.45059 4.9087 4.45059 5.54488 4.06176 5.93727C2.51614 7.49704 1.99131 9.46947 1.99131 10.8836C1.99131 12.3069 2.52161 14.3468 4.06176 15.9011C5.60739 17.4608 7.56194 17.9905 8.96324 17.9905C10.3737 17.9905 12.3951 17.4553 13.9352 15.9011C15.4809 14.3413 16.0057 12.3689 16.0057 10.9547C16.0057 9.53142 15.4754 7.49152 13.9352 5.93727C13.5464 5.54488 13.5464 4.9087 13.9352 4.51632Z" fill="black"/>
+                </svg>
+                
+                </span>
+            <span class="left-menu-text" [class.showtext]="isSideMenuExpanded">Logout</span>
+        </a>
+    </li>    
+  </ul>

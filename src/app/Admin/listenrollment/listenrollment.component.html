@@ -1,0 +1,88 @@
+<div class="container pt-4 mt-5">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between">
+            <div class="f-size-25 f-w-600">Enrollment Details</div>   
+            <!-- <div class="view-list c-pointer" routerLink="/admin/lesson/0">Add</div>                      -->
+        </div>
+    </div>
+    <div class="row element-section p-4">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="head-shadow">
+                        <tr>
+                          <th scope="col" class="col-1">Sr. No.</th>
+                          <th scope="col" class="col-1">Date</th>
+                          <th scope="col" class="col-1">Enrollment ID</th>                          
+                          <th scope="col" class="col-1">Course ID</th>
+                          <th scope="col" class="col-1">Course Name</th>
+                          <th scope="col" class="col-1">Customer ID</th>
+                          <th scope="col" class="col-1">Customer Name</th>
+                          <th scope="col" class="col-1">Total Amount</th>
+                          <th scope="col" class="col-1">Amount Paid</th>
+                          <th scope="col" class="col-1">Status</th>
+                          <th scope="col" class="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody *ngIf="enrollmentData.length == 0">
+                          <tr>
+                            <td colspan="11">
+                                No data found
+                            </td>
+                          </tr>
+                      </tbody>
+                      <tbody *ngIf="enrollmentData.length > 0">
+                        <tr *ngFor="let c of enrollmentData;index as i" class="body-record-class">
+                          <th scope="row">{{i+1}}</th>
+                          <td>{{c?.Date}}</td>
+                          <td>{{c?.EnrollmentId}}</td>
+                          <td>{{c?.CourseId}}</td>                                                                                                
+                          <td>{{c?.Course[0]?.CourseName}}</td>                                                 
+                          <td style="word-wrap: break-word;min-width: 215px;max-width: 215px;">{{c?.UserId}}</td>                                                 
+                          <td></td> 
+                          <td>{{c?.TotalAmount}}</td>   
+                          <td>{{c?.AmountPaid}}</td>
+                          
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" [(ngModel)]="c.Status" (change)="changeEnrollmentStatus(c)">
+                              <label class="form-check-label" for="flexCheckDefault">
+                                {{c?.Status?'Active':'Inactive'}}
+                              </label>
+                            </div>                            
+                          </td>                                              
+                          <td>
+                            <div class="editbtn margin-r-10 c-pointer mb-2" (click)="getQuizScore(c)">Get Quiz Score</div>
+                            <div class="deletebtn c-pointer" (click)="delete(c)"><i class="bi bi-trash3-fill"></i> Delete</div>
+                          </td>
+                        </tr>                        
+                      </tbody>                    
+                </table>
+              </div>           
+        </div>
+    </div>
+</div>
+<button #deleteConfirmationModal [hidden]="true" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">Open Modal</button>
+<div class="modal fade" id="deleteConfirmationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header modal-header-custom">
+        <h5 class="modal-title modal-title-custom" id="staticBackdropLabel">Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #btnDeleteCnfClose></button>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-12">Are you sure, you want to delete these enrollment?</div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-12">
+                <div class="footer-buttons">
+                    <button type="button" class="btn btn-primary search-btn margin-r-10 hover-override" (click)="openDialog('delete')">Delete</button>
+                    <button type="button" class="btn btn-link dwnld-btn hover-override" (click)="openDialog('cancel')" >Cancel</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

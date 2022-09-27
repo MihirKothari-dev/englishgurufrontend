@@ -1,0 +1,37 @@
+
+<div class="container pt-4 mt-5">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between">
+            <div class="f-size-25 f-w-600">Add Courses Sub Category</div>
+            <div class="view-list c-pointer" routerLink="/admin/listsubcategory">View</div>
+        </div>
+    </div>
+    <div class="row element-section p-4">
+        <form [formGroup]="courseSubCategoryData">
+        <div class="col-12">
+            
+            <div class="row">
+                <div class="col-6">
+                    <label for="txtcname" class="form-label">Sub Category Name</label>
+                    <input type="text" class="form-control" placeholder="Sub Category Name" formControlName="SubCategoryName">
+                </div>
+                <div class="col-3">
+                    <label for="txtcname" class="form-label">Status</label>
+                    <select class="form-select form-select-md" aria-label=".form-select-sm example" formControlName="SubCategoryStatus">
+                        <option selected>Select Status</option>
+                        <option value="true">Active</option>
+                        <option value="false">Inactive</option>
+                    </select>
+                </div>                
+                
+            </div>
+            
+            <div class="row mt-5 mb-4">
+                <div class="col-12 d-flex justify-content-center">
+                    <button class="btn addbtn" (click)="saveSubCategory()">Add Sub Category</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>

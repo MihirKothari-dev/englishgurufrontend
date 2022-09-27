@@ -1,0 +1,33 @@
+
+<div class="container pt-4 mt-5">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between">
+            <div class="f-size-25 f-w-600">Add Banner</div>
+            <div class="view-list c-pointer" routerLink="/admin/listbanner">View Banner</div>
+        </div>
+    </div>
+    <div class="row element-section p-4">
+        <form [formGroup]="bannerData">
+        <div class="col-12">
+            
+            <div class="row">
+                <div class="col-6">
+                    <label for="txtcname" class="form-label">Banner Title</label>
+                    <input type="text" class="form-control" placeholder="Banner Title" formControlName="BannerTitle">
+                </div>
+                <div class="col-3">
+
+                </div>
+                
+                
+            </div>
+            
+            <div class="row mt-5 mb-4">
+                <div class="col-12 d-flex justify-content-center">
+                    <button class="btn addbtn" (click)="saveBanner()">Add Banner</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>

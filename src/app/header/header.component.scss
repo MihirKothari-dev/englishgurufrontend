@@ -1,0 +1,66 @@
+.header-hotel-drpwn{
+    background-color: #084E8E;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+}
+.pending-bookings {
+    background-color: #FF6B00;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-radius: 2px;
+}
+.profile-icon {
+    background-color: inherit;
+    border: none;
+    width: inherit !important;
+}
+.profile-drpwn {
+    padding-left: 0;
+}
+.header-hotel-name {
+    margin: 0% 5%;
+    color: #000000;
+}
+.header-hotel-name .name-title {
+    font-size: 20px;
+}
+.header-hotel-name .name-description {
+    font-size: 13px;  
+}
+.user-profile-name {
+    font-size: 25px;
+    color: #000000;
+    font-weight: 400;
+}
+
+.pending-booking-btn{
+    padding-left: 40px !important;
+}
+.header-background{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
+}
+#booking-menu-items .show>.nav-link {
+    background-color: transparent !important;
+}
+.user-dropdown-menu {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    left: auto;
+    margin-top: 0;
+    right: 0;
+}
+.v-aln-mdl {
+    vertical-align: middle;
+}
+.profile-image-setting {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}

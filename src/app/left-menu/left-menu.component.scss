@@ -1,0 +1,68 @@
+.left-menu-text {
+    display: none;
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+}
+.showtext {
+    display: inline-block !important;
+}
+a.nav-link .showtext {
+    margin-left: 20px;
+}
+
+ul li a {
+    margin-top: 8px;
+}
+
+.left-menu-icon svg {
+    height: 20px;
+    width: 20px;
+}
+
+a#booking-menu-items {
+    margin: 0;
+    padding: 5px 0;
+    margin-left: 14%;
+}
+
+.dropdown-menu-items-background {
+    background: #864879;
+    border: 0.5px solid #FFFFFF;
+    border-radius: 2px;
+}
+
+.nav-pills .show>.nav-link {
+    background-color: inherit;
+}
+.contact-us {
+    position: absolute;
+    bottom: 10px;
+}
+a.nav-link.Activated {
+    .plain-icon {
+        display: none;
+    }
+    .sel-icon {
+        display: inline;
+    }
+    .menu-item-selection-highlight {
+        background: #9494b0d9 !important;
+        padding-top: 0.5rem !important;
+    }
+}
+a.nav-link {
+    .plain-icon {
+        display: inline;
+    }
+    .sel-icon {
+        display: none;
+    }
+}
+.logout-background {
+    background: #E9A6A6;
+    border-radius: 4px;
+    margin-top: 30px;
+}
