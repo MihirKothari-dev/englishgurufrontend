@@ -2,8 +2,8 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-const localurl = "https://govind147.azurewebsites.net/api/";
-export const imageUploadBasUrl = 'https://govind147.azurewebsites.net/';
+const localurl = "http://20.219.114.117:22199/api/";
+export const imageUploadBasUrl = 'http://20.219.114.117:22199/';
 export const environment = {
   production: false,
   AdminGroup: {

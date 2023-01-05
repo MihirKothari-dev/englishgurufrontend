@@ -64,7 +64,7 @@ export class CourseService {
     return this._httpclient.put(environment.updateCourseDetails, reqData);
   }
   getCourseById(reqData: any) {
-    return this._httpclient.get(environment.getCourseDetailById+reqData);
+    return this._httpclient.post(environment.getCourseDetailById, reqData);
   }
   deleteCourseFile(reqData: any) {
     const headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');

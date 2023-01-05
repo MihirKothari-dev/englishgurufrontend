@@ -53,8 +53,10 @@ export class AddcourseComponent implements OnInit {
   }
 
   getcoursebyid() {
-    this.courseservice.getCourseById(this.courseId).subscribe((result: any) => {
-      this.courseData.patchValue(result.data);
+    this.courseservice.getCourseById({CourseId: +this.courseId}).subscribe((result: any) => {
+      if (result.data.length > 0) {
+        this.courseData.patchValue(result.data[0]);
+      }      
     });
   }
 
