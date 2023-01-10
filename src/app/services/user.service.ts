@@ -13,6 +13,9 @@ export class UserService {
   getAllUser() {
     return this._httpclient.get(environment.getAllUser);
   }
+  updateUserStatus(reqData: any) {
+    return this._httpclient.post(environment.updateUserStatus, reqData);
+  }
   deleteUser(reqDdata: any) {
     return this._httpclient.delete(environment.deleteUser+reqDdata);
   }

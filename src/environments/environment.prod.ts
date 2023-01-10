@@ -116,6 +116,7 @@ export const environment = {
   searchDocketDetailsByDocketStatus: localurl + 'v1/docket/searchDocketDetailsByDocketStatus',
   getAllUser: localurl + 'v1/user/getAllUser',
   deleteUser: localurl + 'v1/user/deleteUserDetails/',
+  updateUserStatus: localurl + 'v1/user/updateUserAccountStatus',
   getAllBanner: localurl + 'v1/banner/getAllBannerDetails',
   deleteBanner: localurl + 'v1/banner/deleteBannerDetails/',
   createBanner: localurl + 'v1/banner/CreateBannerDetails',

@@ -45,10 +45,19 @@ export class ListuserComponent implements OnInit {
     this.selectedCustomerId = customer._id;
     this.deleteConfirmationModal.nativeElement.click();
   }
+  statusChange(customer: any) {    
+    this.user.updateUserStatus({UserId: customer.UserId, AccountStatus: customer.AccountStatus}).subscribe((result:any) => {
+      alert("User status updated");
+      this.selectedCustomerId = 0;
+      this.getCustomerData();   
+    }, error => {
+      this.notificationService.showError();
+    })
+  }
   openDialog(val: any) {
     if (val == 'delete') {
       this.user.deleteUser(this.selectedCustomerId).subscribe((result: any) => {
-        alert("Customer deleted");
+        alert("User deleted");
         this.selectedCustomerId = 0;
         this.getCustomerData();        
       }, error => {

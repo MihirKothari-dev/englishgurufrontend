@@ -31,7 +31,9 @@
                           <td>{{c?.UserId}}</td>
                           <td>{{c?.userName}}</td>
                           <td>{{c?.Email}}</td>
-                          <td>{{c?.AccountStatus?'Active':'Inactive'}}</td>
+                          <td>
+                            <input type="checkbox" [(ngModel)]="c.AccountStatus" (change)="statusChange(c)">
+                            {{c?.AccountStatus?'Active':'Inactive'}}</td>
                           <!-- <td> -->
                             <!-- <span class="editbtn margin-r-10 c-pointer" (click)="edit(c)"><i class="bi bi-pencil-fill"></i> Edit</span>
                             <span class="deletebtn c-pointer" (click)="delete(c)"><i class="bi bi-trash3-fill"></i> Delete</span> -->

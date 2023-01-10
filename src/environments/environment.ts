@@ -2,8 +2,8 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-const localurl = "http://20.219.114.117:22199/api/";
-export const imageUploadBasUrl = 'http://20.219.114.117:22199/';
+const localurl = "http://20.219.114.117:35001/api/";
+export const imageUploadBasUrl = 'http://20.219.114.117:35001/';
 export const environment = {
   production: false,
   AdminGroup: {
@@ -120,6 +120,7 @@ export const environment = {
   searchDocketDetailsByDocketStatus: localurl + 'v1/docket/searchDocketDetailsByDocketStatus',
   getAllUser: localurl + 'v1/user/getAllUser',
   deleteUser: localurl + 'v1/user/deleteUserDetails/',
+  updateUserStatus: localurl + 'v1/user/updateUserAccountStatus',
   getAllBanner: localurl + 'v1/banner/getAllBannerDetails',
   deleteBanner: localurl + 'v1/banner/deleteBannerDetails/',
   createBanner: localurl + 'v1/banner/CreateBannerDetails',
