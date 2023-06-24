@@ -1,5 +1,5 @@
-const localurl = "https://govind147.azurewebsites.net/api/";
-export const imageUploadBasUrl = 'https://govind147.azurewebsites.net/';
+const localurl = "http://3.111.47.3:4000/api/";
+export const imageUploadBasUrl = 'http://3.111.47.3:4000/';
 export const environment = {
   production: true,
   AdminGroup: {

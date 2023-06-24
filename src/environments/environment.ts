@@ -2,8 +2,8 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-const localurl = "http://20.219.114.117:35001/api/";
-export const imageUploadBasUrl = 'http://20.219.114.117:35001/';
+const localurl = "http://3.111.47.3:4000/api/";
+export const imageUploadBasUrl = 'http://3.111.47.3:4000/';
 export const environment = {
   production: false,
   AdminGroup: {
@@ -167,7 +167,12 @@ export const environment = {
   courseAddFile: localurl + 'v1/addCoureseImage',
   deleteCourseFile: localurl + 'v1/deleteCoursefile/',
   lessionAddFile: localurl + 'v1/addlessonImage',
-  deleteLessionFile: localurl + 'v1/deletelessonfile/'
+  deleteLessionFile: localurl + 'v1/deletelessonfile/',
+  getAllLiveClass: localurl + 'v1/getAllLiveClassDetails',
+  createLiveClass: localurl + 'v1/CreateLiveClassDetails',
+  updateLiveClass: localurl + 'v1/updateLiveClassDetails',
+  deleteLiveClass: localurl + 'v1/deleteLiveClassDetails/',
+  getLiveClassById: localurl + 'v1/getSingleLiveClassDetailsbyLiveClassId'
 };
 /*
  * For easier debugging in development mode, you can import the following file

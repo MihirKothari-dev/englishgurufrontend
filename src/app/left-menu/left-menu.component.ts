@@ -21,7 +21,8 @@ export class LeftMenuComponent implements OnInit {
     deliveryrunsheet: false,
     Inscan: false,
     pod: false,
-    reports: false
+    reports: false,
+    live: false
   }
   
   constructor(private sliderService:SliderMenuService, 

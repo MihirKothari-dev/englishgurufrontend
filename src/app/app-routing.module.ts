@@ -27,6 +27,8 @@ import { LoginlayoutComponent } from './layouts/loginlayout/loginlayout.componen
 import { ForgetPasswordComponent } from './login/forget-password.component';
 import { ResetPasswordComponent } from './login/reset-password/reset-password.component';
 import { SignInComponent } from './login/sign-in.component';
+import { ListLiveClassComponent } from './Admin/list-live-class/list-live-class.component';
+import { AddLiveClassComponent } from './Admin/add-live-class/add-live-class.component';
 
 const routes: Routes = [
   {
@@ -66,6 +68,8 @@ const routes: Routes = [
       { path: 'editquizquestion/:quizid/:questionid/:questionno', component: AddQuizQuestionsComponent, canActivate: [AdminGuard] },
       { path: 'resetpass', component: ResetPasswordComponent, canActivate: [AdminGuard] },  
       { path: 'quizscore/:quizid/:userid', component: QuizScoreComponent, canActivate: [AdminGuard] },  
+      { path: 'liveclass/:id', component: AddLiveClassComponent, canActivate: [AdminGuard] },
+      { path: 'listliveclass', component: ListLiveClassComponent, canActivate: [AdminGuard] },
     ]
   }  
 ];

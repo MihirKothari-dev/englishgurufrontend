@@ -22,6 +22,8 @@ import { AddQuizQuestionsComponent } from './add-quiz-questions/add-quiz-questio
 import { ListQuizQuestionsComponent } from './list-quiz-questions/list-quiz-questions.component';
 import { QuizScoreComponent } from './quiz-score/quiz-score.component';
 import { NgChartsModule } from 'ng2-charts';
+import { AddLiveClassComponent } from './add-live-class/add-live-class.component';
+import { ListLiveClassComponent } from './list-live-class/list-live-class.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { NgChartsModule } from 'ng2-charts';
     ListQuizComponent,
     AddQuizQuestionsComponent,
     ListQuizQuestionsComponent,
-    QuizScoreComponent
+    QuizScoreComponent,
+    AddLiveClassComponent,
+    ListLiveClassComponent
   ],
   imports: [
     CommonModule,

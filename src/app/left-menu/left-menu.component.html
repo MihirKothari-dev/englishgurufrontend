@@ -195,7 +195,37 @@
                 
             </div>
         </a>
-        
+        <a id="propertymenu" routerLinkActive="Activated" class="nav-link" aria-current="page" href="javascript:void(0);">
+            <span class="left-menu-icon plain-icon" (click)="expand()">
+                
+                    
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.62 5.62548C12.62 7.62777 10.9968 9.25095 8.99449 9.25095C6.99219 9.25095 5.36901 7.62777 5.36901 5.62548C5.36901 3.62318 6.99219 2 8.99449 2C10.9968 2 12.62 3.62318 12.62 5.62548ZM14.62 5.62548C14.62 8.73234 12.1014 11.251 8.99449 11.251C5.88762 11.251 3.36901 8.73234 3.36901 5.62548C3.36901 2.51861 5.88762 0 8.99449 0C12.1014 0 14.62 2.51861 14.62 5.62548ZM3.42296 11.5573C3.56163 11.451 3.72874 11.3857 3.90329 11.3781C4.57677 11.3489 4.87098 11.5232 5.11314 11.8501C5.45922 12.3172 5.2335 13.002 4.77335 13.3573C3.78499 14.1204 3.02154 15.1437 2.5882 16.3138H15.3996C14.9664 15.1439 14.2032 14.1209 13.2151 13.3577C12.7549 13.0023 12.5293 12.3174 12.8755 11.8503C13.1178 11.5233 13.4119 11.349 14.0853 11.3785C14.2597 11.3861 14.4267 11.4514 14.5653 11.5577C16.4037 12.9667 17.6733 15.0568 17.9797 17.4413C18.0589 18.0576 17.5476 18.564 16.9262 18.564H1.06161C0.440239 18.564 -0.0710824 18.0576 0.00811787 17.4413C0.314568 15.0566 1.58434 12.9663 3.42296 11.5573Z" fill="white"/>
+                        </svg>
+                </span>
+                <span class="left-menu-icon sel-icon" (click)="expand()">
+                        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.62 5.62548C12.62 7.62777 10.9968 9.25095 8.99449 9.25095C6.99219 9.25095 5.36901 7.62777 5.36901 5.62548C5.36901 3.62318 6.99219 2 8.99449 2C10.9968 2 12.62 3.62318 12.62 5.62548ZM14.62 5.62548C14.62 8.73234 12.1014 11.251 8.99449 11.251C5.88762 11.251 3.36901 8.73234 3.36901 5.62548C3.36901 2.51861 5.88762 0 8.99449 0C12.1014 0 14.62 2.51861 14.62 5.62548ZM3.42296 11.5573C3.56163 11.451 3.72874 11.3857 3.90329 11.3781C4.57677 11.3489 4.87098 11.5232 5.11314 11.8501C5.45922 12.3172 5.2335 13.002 4.77335 13.3573C3.78499 14.1204 3.02154 15.1437 2.5882 16.3138H15.3996C14.9664 15.1439 14.2032 14.1209 13.2151 13.3577C12.7549 13.0023 12.5293 12.3174 12.8755 11.8503C13.1178 11.5233 13.4119 11.349 14.0853 11.3785C14.2597 11.3861 14.4267 11.4514 14.5653 11.5577C16.4037 12.9667 17.6733 15.0568 17.9797 17.4413C18.0589 18.0576 17.5476 18.564 16.9262 18.564H1.06161C0.440239 18.564 -0.0710824 18.0576 0.00811787 17.4413C0.314568 15.0566 1.58434 12.9663 3.42296 11.5573Z" fill="#FFC01F"/>
+                            </svg>             
+                </span>
+                <span class="left-menu-text" (click)="toggleDropDownMenu('live')" [class.showtext]="isSideMenuExpanded">
+                    Live Classes
+                    <span class="margin-l-5" data-bs-toggle="collapse">
+                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C-0.0976311 0.683417 -0.0976312 1.31658 0.292893 1.70711L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711L13.7071 1.70711C14.0976 1.31658 14.0976 0.683418 13.7071 0.292894C13.3166 -0.0976305 12.6834 -0.0976305 12.2929 0.292894L7 5.58579L1.70711 0.292893C1.31658 -0.097631 0.683418 -0.0976311 0.292893 0.292893Z" fill="white"/>
+                        </svg>                    
+                    </span> 
+                </span>
+                <div id="property-menu-items" class="accordion-collapse dropdown-menu-items-background collapse" [class.show]="dropDownMenu.live" >
+                    <a class="nav-link" routerLinkActive="menu-item-selection-highlight"  aria-current="page" href="javascript:void(0);" routerLink="/admin/liveclass/0">            
+                        <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded" >Add Live Class</span> 
+                    </a>
+                    <a class="nav-link mt-0 pt-0" routerLinkActive="menu-item-selection-highlight" aria-current="page" href="javascript:void(0);" routerLink="/admin/listliveclass">            
+                        <span class="left-menu-text f-w-500 margin-l-0" [class.showtext]="isSideMenuExpanded">Live Class List</span> 
+                    </a>
+                    
+                </div>
+        </a>
         
         <a class="nav-link logout-background mt-4" aria-current="page" href="javascript:void(0);" (click)="logout()">
             <span class="left-menu-icon" (click)="expand()"><svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
