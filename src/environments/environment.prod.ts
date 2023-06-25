@@ -163,5 +163,10 @@ export const environment = {
   courseAddFile: localurl + 'v1/addCoureseImage',
   deleteCourseFile: localurl + 'v1/deleteCoursefile/',
   lessionAddFile: localurl + 'v1/addlessonImage',
-  deleteLessionFile: localurl + 'v1/deletelessonfile/'
+  deleteLessionFile: localurl + 'v1/deletelessonfile/',
+  getAllLiveClass: localurl + 'v1/getAllLiveClassDetails',
+  createLiveClass: localurl + 'v1/CreateLiveClassDetails',
+  updateLiveClass: localurl + 'v1/updateLiveClassDetails',
+  deleteLiveClass: localurl + 'v1/deleteLiveClassDetails/',
+  getLiveClassById: localurl + 'v1/getSingleLiveClassDetailsbyLiveClassId'
 };
